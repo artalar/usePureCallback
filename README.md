@@ -2,7 +2,7 @@
 
 **This is not a NPM package, this is simple snipet to copy paste it.**
 
-Just copy the code above and paste it to your project.
+Just copy the code below and paste it to your project.
 
 > You can find `.ts` / `.d.ts` / `js` version of this code in the root of [the repo](https://github.com/artalar/usePureCallback).
 
@@ -34,8 +34,8 @@ export function usePureCallback<Deps extends any[], Args extends any[], Return>(
 
 ## Motivation
 
-You could memoize any kind of data, by its strict / shallow / deep / custom comparison except a function. If the function depends on some dynamic outer data, it should be recreated by each data changing and even if the function is used rarely, it will break all above memoization, which we could call a **parasite immutability**.
-To prevent this harmful behavior, we should separate 'dirty' data and function logic to mutable reference and pure function, which depend only on its arguments. The funny thing - we could do it super easy, check the code below.
+You could memoize any kind of data, by its strict / shallow / deep / custom comparison except a function. If the function depends on some dynamic outer data, it should be recreated by each data changing and even if the function is used rarely, it will break all below memoization, which we could call a **parasite immutability**.
+To prevent this harmful behavior, we should separate 'dirty' data and function logic to mutable reference and pure function, which depend only on its arguments. The funny thing - we could do it super easy, check the code above.
 
 ## Limitations
 
