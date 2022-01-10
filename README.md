@@ -18,6 +18,7 @@ import { useRef } from "react";
  *   [props.onChange],
  *   ([onChange], event) => onChange(event.target.value)
  * )
+ * @see {@link github.com/artalar/usePureCallback}
  */
 export function usePureCallback<Deps extends any[], Args extends any[], Return>(
   deps: Deps,

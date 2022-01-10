@@ -5,7 +5,7 @@
   "main": "index.js",
   "typings": "index.d.ts",
   "scripts": {
-    "build": "tsc --target esnext --moduleResolution node  --declaration --removeComments index.ts"
+    "build": "tsc --target esnext --moduleResolution node  --declaration index.ts"
   },
   "repository": {
     "type": "git",
