@@ -1,0 +1,30 @@
+{
+  "name": "usepurecallback",
+  "version": "1.0.0",
+  "description": "useCallback doing right",
+  "main": "index.js",
+  "typings": "index.d.ts",
+  "scripts": {
+    "build": "tsc --target esnext --moduleResolution node  --declaration --removeComments index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/artalar/usePureCallback.git"
+  },
+  "keywords": [
+    "react",
+    "useCallback"
+  ],
+  "author": "artalar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/artalar/usePureCallback/issues"
+  },
+  "homepage": "https://github.com/artalar/usePureCallback#readme",
+  "peerDependencies": {
+    "react": "^16.8.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.5.4"
+  }
+}
