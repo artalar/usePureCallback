@@ -37,6 +37,8 @@ export function usePureCallback<Deps extends any[], Args extends any[], Return>(
 You could memoize any kind of data, by it strict / shallow / deep / custom comparison except of a function. If function depends of some dynamic outer data, it shoud recreating by each data changing and even if the function used rarly, it will broke all above memoization, which we could call as a **parasite immutability**.
 To prevent this harmful behaviour, we should separate 'dirty' data and function logic to mutable reference and pure function, which depend only by its arguments. The funny thing - we could do it super easy, check the code below.
 
-## Limitation
+## Limitations
 
 In the rare cases you need to react to the function changing (do a side effect), which looks like antipatern already, but if you still need this behaviour, use native `useCallback`.
+
+This code could produce errors in concurent rendering and errors in the subtree rendering. I will think about right implementation in the feature, PR / issue welcome!
