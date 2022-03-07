@@ -2,6 +2,8 @@
 
 **This is not a NPM package, this is simple snipet to copy paste it.**
 
+[React docs reference](https://reactjs.org/docs/hooks-faq.html#how-to-read-an-often-changing-value-from-usecallback).
+
 Just copy the code below and paste it to your project.
 
 > You can find `.ts` / `.d.ts` / `js` version of this code in the root of [the repo](https://github.com/artalar/usePureCallback).
