@@ -30,7 +30,10 @@ export function usePureCallback<Deps extends any[], Args extends any[], Return>(
     fn: (...args: Args) => fn(argsRef.current.deps, ...args),
     deps
   });
-  argsRef.current.deps = deps;
+  // `useLayoutEffect` for React <18
+  useInsertionEffect(() => {
+    argsRef.current.deps = deps;
+  })
   return argsRef.current.fn;
 }
 ```
@@ -43,5 +46,3 @@ To prevent this harmful behavior, we should separate 'dirty' data and function l
 ## Limitations
 
 In the rare cases you need to react to the function changing (do a side effect), which looks like antipattern already, but if you still need this behavior, use native `useCallback`.
-
-This code could produce errors in concurrent rendering and failed subtree rendering. I will think about the right implementation in the feature, PR / issue welcome!
